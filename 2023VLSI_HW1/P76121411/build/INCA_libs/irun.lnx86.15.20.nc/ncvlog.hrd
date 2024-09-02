@@ -1,0 +1,16 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-INCDIR
+/home/YanYouChen/VLSI_final/2023VLSI_HW1/P76121411/./src
+-INCDIR
+/home/YanYouChen/VLSI_final/2023VLSI_HW1/P76121411/./include
+-INCDIR
+/home/YanYouChen/VLSI_final/2023VLSI_HW1/P76121411/./sim
+-DEFINE
+prog0
+-DEFINE
+CYCLE=14.0
+-DEFINE
+MAX=100000

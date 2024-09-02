@@ -1,0 +1,50 @@
+2023-09-26 17:46:30.299704 (23600) main____ INFO    ----------------------------------------
+2023-09-26 17:46:30.299879 (23600) main____ INFO    JasperGold version info
+2023-09-26 17:46:30.299904 (23600) main____ INFO      tool      : JasperGold 2018.03
+2023-09-26 17:46:30.299925 (23600) main____ INFO      version   : 2018.03p001 64 bits
+2023-09-26 17:46:30.299943 (23600) main____ INFO      build date: 2018.04.24 18:13:05 PDT
+2023-09-26 17:46:30.299957 (23600) main____ INFO    ----------------------------------------
+2023-09-26 17:46:30.299970 (23600) main____ INFO    Runtime info:
+2023-09-26 17:46:30.299985 (23600) main____ INFO      platform  : Linux 3.10.0-957.21.3.el7.x86_64 x86_64
+2023-09-26 17:46:30.300004 (23600) main____ INFO      hostname  : vlsicad9
+2023-09-26 17:46:30.300019 (23600) main____ INFO      pid       : 23600
+2023-09-26 17:46:30.300033 (23600) main____ INFO      arguments : '-style' 'windows' '-superlint'
+2023-09-26 17:46:30.300046 (23600) main____ INFO    ----------------------------------------
+2023-09-26 17:46:30.300059 (23600) main____ INFO    System resource limits info:
+2023-09-26 17:46:30.300073 (23600) main____ INFO      virtual memory: unlimited
+2023-09-26 17:46:30.300089 (23600) main____ INFO      cpu time      : unlimited
+2023-09-26 17:46:30.300113 (23600) main____ INFO      stack size    : 8388608 B
+2023-09-26 17:46:30.300137 (23600) main____ INFO      core file size: 0 B
+2023-09-26 17:46:30.300159 (23600) main____ INFO      open files    : 1024
+2023-09-26 17:46:30.300175 (23600) main____ INFO      file size     : unlimited
+2023-09-26 17:46:30.300189 (23600) main____ INFO    ----------------------------------------
+2023-09-26 17:46:30.300202 (23600) main____ INFO    Memory statistics:
+2023-09-26 17:46:30.300215 (23600) main____ INFO      total physical memory  : 24509248 kB
+2023-09-26 17:46:30.300228 (23600) main____ INFO      free physical memory   : 2387640 kB
+2023-09-26 17:46:30.300240 (23600) main____ INFO      committed address space: 11521148 kB
+2023-09-26 17:46:30.300253 (23600) main____ INFO    ----------------------------------------
+2023-09-26 17:46:30.300302 (23600) main____ INFO    Important environment variables:
+2023-09-26 17:46:30.300327 (23600) main____ INFO      DISPLAY        : 'localhost:13.0'
+2023-09-26 17:46:30.300349 (23600) main____ INFO      LM_LICENSE_FILE: '5280@vlsicad8:26000@lscic:1717@lstn:5280@lstn:26585@lstc:26585@lshc:26585@lstn:26585@lsncku:26585@lscic:'
+2023-09-26 17:46:30.300364 (23600) main____ INFO    ----------------------------------------
+2023-09-26 17:46:30.301750 (23600) lic_core INFO    Initializing license system ...
+2023-09-26 17:46:30.303126 (23600) lic_core INFO    ... license system initialized.
+2023-09-26 17:46:30.305365 (23600) lic__man INFO    Claim 'main' for <ui>.
+2023-09-26 17:46:30.305438 (23600) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2023-09-26 17:46:30.448006 (23600) lic_core INFO    ... (1) checkout succeeded
+2023-09-26 17:46:30.448193 (23600) lic__man INFO    Claim 'superlint' for <ui>.
+2023-09-26 17:46:30.448263 (23600) lic_core INFO    (2) checking out 'jasper_afl' ...
+2023-09-26 17:46:40.541151 (23600) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2023-09-26 17:46:40.541222 (23600) lic_core INFO    (3) checking out 'jasper_dao' ...
+2023-09-26 17:46:40.684700 (23600) lic_core INFO    ... (3) checkout succeeded
+2023-09-26 17:46:41.916998 (23600) lic__man INFO    Claim 'superlint' for <ui>.
+2023-09-26 17:46:42.293952 (23600) lic__man INFO    Unclaim 'superlint' for <ui>.
+2023-09-26 17:46:42.294046 (23600) lic__man INFO    Claim 'superlint' for <ui>.
+2023-09-26 17:46:42.318965 (23600) session_ INFO    Starting analysis session with session id 'session_0' ...
+2023-09-26 17:46:42.321319 (23600) session_ INFO    Analysis session with session id 'session_0' started (pid: 23627)
+2023-09-26 17:46:46.713605 (23600) session_ INFO    Analysis session 'session_0' connected to the console (host: 192.168.100.10:54120)
+2023-09-26 17:47:32.482757 (23600) lic__man INFO    Unclaim everything for 'session_0'.
+2023-09-26 17:47:33.257054 (23600) lic__man INFO    Unclaim everything for 'session_0'.
+2023-09-26 17:47:33.461794 (23600) lic__man INFO    Claim 'superlint' for 'session_0'.
+2023-09-26 17:50:25.971112 (23600) main____ INFO    About to exit: requested from GUI
+2023-09-26 17:50:26.258761 (23600) main____ INFO    Exiting with status 0.

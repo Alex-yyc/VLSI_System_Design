@@ -1,0 +1,29 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx86.15.20.nc
+-RUNMODE
+/home/YanYouChen/VLSI_final/2023VLSI_HW1/P76121411/./sim/top_tb.sv
+-INCDIR
+/home/YanYouChen/VLSI_final/2023VLSI_HW1/P76121411/./src
+-INCDIR
+/home/YanYouChen/VLSI_final/2023VLSI_HW1/P76121411/./include
+-INCDIR
+/home/YanYouChen/VLSI_final/2023VLSI_HW1/P76121411/./sim
+-DEFINE
+prog0
+-DEFINE
+CYCLE=14.0
+-DEFINE
+MAX=100000
+-CDSLIB
+./INCA_libs/irun.lnx86.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx86.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx86.15.20.nc/xllibs
+-ALLOWUNBOUND

@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : top
+Version: O-2018.06
+Date   : Sun Nov 26 16:01:47 2023
+****************************************
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /usr/cad/CBDK/CBDK018_UMC_Faraday_v1.0/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.db)
+    SRAM_WC (File: /home/user2/vsd23/vsd2334/Desktop/test_nrst_1125copy/sim/SRAM/SRAM_WC.db)
+
+Number of ports:                         9415
+Number of nets:                         37325
+Number of cells:                        27132
+Number of combinational cells:          22627
+Number of sequential cells:              4448
+Number of macros/black boxes:               2
+Number of buf/inv:                       5936
+Number of references:                      15
+
+Combinational area:             463779.691539
+Buf/Inv area:                    68030.020086
+Noncombinational area:          251008.936962
+Macro/Black Box area:          5344494.500000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:               6059283.128501
+Total area:                 undefined
+1

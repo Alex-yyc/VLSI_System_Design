@@ -1,0 +1,204 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top
+Version: O-2018.06
+Date   : Sun Nov 26 16:01:47 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: CPU_wrapper/CPU/EXE/EXE_rd_addr_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: CPU_wrapper/CPU/IFE/program_counter/PC_out_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  CPU                enG50K                fsa0m_a_generic_core_ss1p62v125c
+  Forwarding_Unit    enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  EXE                enG50K                fsa0m_a_generic_core_ss1p62v125c
+  ALU                enG30K                fsa0m_a_generic_core_ss1p62v125c
+  ALU_DW_mult_tc_2   enG10K                fsa0m_a_generic_core_ss1p62v125c
+  IFE                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  CPU_wrapper/CPU/EXE/EXE_rd_addr_reg[0]/CK (DFFP)        0.00 #     1.00 r
+  CPU_wrapper/CPU/EXE/EXE_rd_addr_reg[0]/Q (DFFP)         0.40       1.40 r
+  CPU_wrapper/CPU/EXE/EXE_rd_addr[0] (EXE)                0.00       1.40 r
+  CPU_wrapper/CPU/ForwardUnit/EXE_rd_addr[0] (Forwarding_Unit)
+                                                          0.00       1.40 r
+  CPU_wrapper/CPU/ForwardUnit/U5/O (XNR2HS)               0.24       1.64 r
+  CPU_wrapper/CPU/ForwardUnit/U4/O (ND3P)                 0.11       1.75 f
+  CPU_wrapper/CPU/ForwardUnit/U25/O (OR2P)                0.24       1.99 f
+  CPU_wrapper/CPU/ForwardUnit/U40/O (AN4B1)               0.23       2.21 f
+  CPU_wrapper/CPU/ForwardUnit/U18/O (AN4P)                0.25       2.47 f
+  CPU_wrapper/CPU/ForwardUnit/Forwarding_rs1_src[1] (Forwarding_Unit)
+                                                          0.00       2.47 f
+  CPU_wrapper/CPU/EXE/Forwarding_rs1_src[1] (EXE)         0.00       2.47 f
+  CPU_wrapper/CPU/EXE/U88/O (INV4CK)                      0.07       2.54 r
+  CPU_wrapper/CPU/EXE/U304/O (BUF6)                       0.15       2.69 r
+  CPU_wrapper/CPU/EXE/U144/O (BUF12CK)                    0.18       2.87 r
+  CPU_wrapper/CPU/EXE/U306/O (ND2F)                       0.07       2.94 f
+  CPU_wrapper/CPU/EXE/U79/O (BUF4CK)                      0.18       3.12 f
+  CPU_wrapper/CPU/EXE/U164/O (BUF12CK)                    0.18       3.29 f
+  CPU_wrapper/CPU/EXE/U412/O (OAI222S)                    0.32       3.62 r
+  CPU_wrapper/CPU/EXE/ALU/rs1[16] (ALU)                   0.00       3.62 r
+  CPU_wrapper/CPU/EXE/ALU/U35/O (BUF2)                    0.64       4.26 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/a[16] (ALU_DW_mult_tc_2)
+                                                          0.00       4.26 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U3971/O (XNR2HS)        0.28       4.54 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2241/O (BUF1CK)        0.63       5.17 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2213/O (ND2T)          0.43       5.60 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2215/O (BUF1)          0.72       6.31 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U3153/O (OAI22S)        0.21       6.52 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U3152/CO (FA1S)         0.54       7.06 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2857/CO (FA1S)         0.56       7.62 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2861/CO (FA1S)         0.56       8.18 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2709/S (FA1S)          0.70       8.88 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2293/S (FA1S)          0.55       9.43 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2433/S (FA1)           0.55       9.97 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2598/O (ND2)           0.14      10.12 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2572/O (OAI12HS)       0.28      10.40 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2570/O (AOI12HS)       0.18      10.58 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2569/O (OAI12HS)       0.23      10.81 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2567/O (AOI12HS)       0.13      10.94 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2557/O (OAI12HS)       0.32      11.26 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2558/O (AOI12HS)       0.21      11.47 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2556/O (OAI12HS)       0.33      11.80 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2560/O (AOI12HS)       0.21      12.01 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2555/O (OAI12HS)       0.33      12.33 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2565/O (AOI12HS)       0.24      12.57 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2392/O (OAI12H)        0.25      12.82 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2562/O (AOI12HS)       0.21      13.03 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2391/O (OAI12H)        0.26      13.29 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2393/O (AOI12H)        0.16      13.44 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2402/O (OAI12H)        0.24      13.68 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2403/O (AOI12H)        0.14      13.82 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2588/O (OAI12HS)       0.30      14.13 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2296/O (AOI12HS)       0.21      14.34 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2589/O (OAI12HS)       0.36      14.70 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2405/O (AOI12H)        0.18      14.88 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2330/O (OAI12H)        0.25      15.12 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2404/O (AOI12H)        0.18      15.30 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2331/O (OAI12HP)       0.20      15.50 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2297/O (AOI12H)        0.13      15.63 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2636/O (OAI12HS)       0.30      15.93 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2638/O (AOI12HS)       0.23      16.16 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2432/O (OAI12H)        0.25      16.41 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2640/O (AOI12HS)       0.19      16.59 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2357/O (OAI12HS)       0.32      16.91 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2705/O (AOI12HS)       0.21      17.13 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2834/O (OAI12HS)       0.26      17.39 r
+  CPU_wrapper/CPU/EXE/ALU/mult_70/U2832/O (XNR2HS)        0.10      17.49 f
+  CPU_wrapper/CPU/EXE/ALU/mult_70/product[63] (ALU_DW_mult_tc_2)
+                                                          0.00      17.49 f
+  CPU_wrapper/CPU/EXE/ALU/U798/O (AO222)                  0.34      17.83 f
+  CPU_wrapper/CPU/EXE/ALU/U805/O (OR3)                    0.34      18.17 f
+  CPU_wrapper/CPU/EXE/ALU/ALU_out[31] (ALU)               0.00      18.17 f
+  CPU_wrapper/CPU/EXE/PC_immrs1[31] (EXE)                 0.00      18.17 f
+  CPU_wrapper/CPU/IFE/PC_immrs1[31] (IFE)                 0.00      18.17 f
+  CPU_wrapper/CPU/IFE/U21/O (AO222S)                      0.30      18.47 f
+  CPU_wrapper/CPU/IFE/U3/O (OR2B1)                        0.22      18.68 f
+  CPU_wrapper/CPU/IFE/program_counter/PC_in[31] (program_counter)
+                                                          0.00      18.68 f
+  CPU_wrapper/CPU/IFE/program_counter/PC_out_reg[31]/D (DFCLRBN)
+                                                          0.00      18.68 f
+  data arrival time                                                 18.68
+
+  clock clk (rise edge)                                  18.00      18.00
+  clock network delay (ideal)                             1.00      19.00
+  clock uncertainty                                      -0.10      18.90
+  CPU_wrapper/CPU/IFE/program_counter/PC_out_reg[31]/CK (DFCLRBN)
+                                                          0.00      18.90 r
+  library setup time                                     -0.22      18.68
+  data required time                                                18.68
+  --------------------------------------------------------------------------
+  data required time                                                18.68
+  data arrival time                                                -18.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: WDT_wrapper/WDT/count_reg[0]
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: WDT_wrapper/WDT/count_reg[31]
+            (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top                enG1000K              fsa0m_a_generic_core_ss1p62v125c
+  WDT                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  WDT_DW01_inc_0     enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  WDT_wrapper/WDT/count_reg[0]/CK (QDFFRBN)               0.00       1.00 r
+  WDT_wrapper/WDT/count_reg[0]/Q (QDFFRBN)                0.44       1.44 f
+  WDT_wrapper/WDT/add_103/A[0] (WDT_DW01_inc_0)           0.00       1.44 f
+  WDT_wrapper/WDT/add_103/U1_1_1/C (HA1)                  0.23       1.67 f
+  WDT_wrapper/WDT/add_103/U1_1_2/C (HA1)                  0.21       1.87 f
+  WDT_wrapper/WDT/add_103/U1_1_3/C (HA1)                  0.21       2.08 f
+  WDT_wrapper/WDT/add_103/U1_1_4/C (HA1)                  0.21       2.29 f
+  WDT_wrapper/WDT/add_103/U1_1_5/C (HA1)                  0.21       2.50 f
+  WDT_wrapper/WDT/add_103/U1_1_6/C (HA1)                  0.21       2.71 f
+  WDT_wrapper/WDT/add_103/U1_1_7/C (HA1)                  0.21       2.92 f
+  WDT_wrapper/WDT/add_103/U1_1_8/C (HA1)                  0.21       3.12 f
+  WDT_wrapper/WDT/add_103/U1_1_9/C (HA1)                  0.21       3.33 f
+  WDT_wrapper/WDT/add_103/U1_1_10/C (HA1)                 0.21       3.54 f
+  WDT_wrapper/WDT/add_103/U1_1_11/C (HA1)                 0.21       3.75 f
+  WDT_wrapper/WDT/add_103/U1_1_12/C (HA1)                 0.21       3.96 f
+  WDT_wrapper/WDT/add_103/U1_1_13/C (HA1)                 0.21       4.16 f
+  WDT_wrapper/WDT/add_103/U1_1_14/C (HA1)                 0.21       4.37 f
+  WDT_wrapper/WDT/add_103/U1_1_15/C (HA1)                 0.21       4.58 f
+  WDT_wrapper/WDT/add_103/U1_1_16/C (HA1)                 0.21       4.79 f
+  WDT_wrapper/WDT/add_103/U1_1_17/C (HA1)                 0.21       5.00 f
+  WDT_wrapper/WDT/add_103/U1_1_18/C (HA1)                 0.21       5.20 f
+  WDT_wrapper/WDT/add_103/U1_1_19/C (HA1)                 0.21       5.41 f
+  WDT_wrapper/WDT/add_103/U1_1_20/C (HA1)                 0.21       5.62 f
+  WDT_wrapper/WDT/add_103/U1_1_21/C (HA1)                 0.21       5.83 f
+  WDT_wrapper/WDT/add_103/U1_1_22/C (HA1)                 0.21       6.04 f
+  WDT_wrapper/WDT/add_103/U1_1_23/C (HA1)                 0.21       6.25 f
+  WDT_wrapper/WDT/add_103/U1_1_24/C (HA1)                 0.21       6.45 f
+  WDT_wrapper/WDT/add_103/U1_1_25/C (HA1)                 0.21       6.66 f
+  WDT_wrapper/WDT/add_103/U1_1_26/C (HA1)                 0.21       6.87 f
+  WDT_wrapper/WDT/add_103/U1_1_27/C (HA1)                 0.21       7.08 f
+  WDT_wrapper/WDT/add_103/U1_1_28/C (HA1)                 0.21       7.29 f
+  WDT_wrapper/WDT/add_103/U1_1_29/C (HA1)                 0.21       7.49 f
+  WDT_wrapper/WDT/add_103/U1_1_30/C (HA1)                 0.20       7.70 f
+  WDT_wrapper/WDT/add_103/U1/O (XOR2HS)                   0.17       7.87 r
+  WDT_wrapper/WDT/add_103/SUM[31] (WDT_DW01_inc_0)        0.00       7.87 r
+  WDT_wrapper/WDT/U74/O (AO22)                            0.25       8.12 r
+  WDT_wrapper/WDT/count_reg[31]/D (QDFFRBN)               0.00       8.12 r
+  data arrival time                                                  8.12
+
+  clock clk2 (rise edge)                                100.00     100.00
+  clock network delay (ideal)                             1.00     101.00
+  clock uncertainty                                      -0.10     100.90
+  WDT_wrapper/WDT/count_reg[31]/CK (QDFFRBN)              0.00     100.90 r
+  library setup time                                     -0.16     100.74
+  data required time                                               100.74
+  --------------------------------------------------------------------------
+  data required time                                               100.74
+  data arrival time                                                 -8.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                       92.62
+
+
+1

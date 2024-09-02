@@ -1,0 +1,158 @@
+#----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2018.03
+# platform  : Linux 3.10.0-957.21.3.el7.x86_64
+# version   : 2018.03p001 64 bits
+# build date: 2018.04.24 18:13:05 PDT
+#----------------------------------------
+# started Tue Sep 26 17:25:47 CST 2023
+# hostname  : vlsicad9
+# pid       : 17752
+# arguments : '-label' 'session_0' '-console' 'vlsicad9:42346' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/user2/vsd23/vsd2334/Desktop/2023VLSI_HW1/script/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/user2/vsd23/vsd2334/Desktop/2023VLSI_HW1/script/jgproject/.tmp/.initCmds.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2018 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc. 
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+JasperGold Apps Analysis Session - /home/user2/vsd23/vsd2334/Desktop/2023VLSI_HW1/script/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_dao".
+INFO: reading configuration file "/home/user2/vsd23/vsd2334/.config/jasper/jaspergold.conf".
+% check_superlint -init
+% include /home/user2/vsd23/vsd2334/Desktop/2023VLSI_HW1/script/superlint.tcl
+%% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+%% 
+%% # Config rules
+%% config_rtlds -rule -enable -domain { LINT }
+%% config_rtlds -rule -disable -tag { CAS_IS_DFRC SIG_IS_DLCK SIG_NO_TGFL SIG_NO_TGRS SIG_NO_TGST FSM_NO_MTRN FSM_NO_TRRN }
+%% # vsd2018_constrain //
+%% config_rtlds -rule  -disable -category { NAMING AUTO_FORMAL_DEAD_CODE AUTO_FORMAL_SIGNALS AUTO_FORMAL_ARITHMETIC_OVERFLOW }
+%% config_rtlds -rule  -disable -tag { IDN_NR_SVKY ARY_MS_DRNG IDN_NR_AMKY IDN_NR_CKYW IDN_NR_SVKW ARY_NR_LBND VAR_NR_INDL INS_NR_PTEX INP_NO_USED OTP_NR_ASYA FLP_NR_MXCS OTP_UC_INST OTP_NR_UDRV REG_NR_TRRC INS_NR_INPR MOD_NS_GLGC } 
+%% config_rtlds -rule  -disable -tag { REG_NR_RWRC  }
+%% config_rtlds -rule  -disable -tag { BUS_IS_FLOT ASG_IS_XRCH }
+%% #config_rtlds -rule  -reset -sync
+%% # vsd2018_constrain //
+%% 
+%% analyze -sv +incdir+../include+../src/AHB ../src/top.sv ../sim/SRAM/SRAM_rtl.sv
+[-- (VERI-1482)] Analyzing Verilog file '/usr/cad/cadence/JASPER/jasper_2018.03p001/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file '../src/top.sv'
+[INFO (VERI-1328)] ../src/top.sv(1): analyzing included file '../src/IFE.sv'
+[INFO (VERI-1328)] ../src/IFE.sv(1): analyzing included file '../src/program_counter.sv'
+[INFO (VERI-1328)] ../src/top.sv(2): analyzing included file '../src/ID.sv'
+[INFO (VERI-1328)] ../src/ID.sv(1): analyzing included file '../src/ControlUnit.sv'
+[INFO (VERI-1328)] ../src/ID.sv(2): analyzing included file '../src/RegisterFile.sv'
+[INFO (VERI-1328)] ../src/ID.sv(3): analyzing included file '../src/ImmediateGenerator.sv'
+[INFO (VERI-1328)] ../src/top.sv(3): analyzing included file '../src/EXE.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(1): analyzing included file '../src/ALUCtrl.sv'
+[INFO (VERI-1328)] ../src/EXE.sv(2): analyzing included file '../src/ALU.sv'
+[INFO (VERI-1328)] ../src/top.sv(4): analyzing included file '../src/MEM.sv'
+[INFO (VERI-1328)] ../src/top.sv(5): analyzing included file '../src/WB.sv'
+[INFO (VERI-1328)] ../src/top.sv(6): analyzing included file '../src/Forwarding_Unit.sv'
+[INFO (VERI-1328)] ../src/top.sv(7): analyzing included file '../src/BranchCtrl.sv'
+[INFO (VERI-1328)] ../src/top.sv(8): analyzing included file '../src/HazardCtrl.sv'
+[INFO (VERI-1328)] ../src/top.sv(9): analyzing included file '../src/SRAM_wrapper.sv'
+[-- (VERI-1482)] Analyzing Verilog file '../sim/SRAM/SRAM_rtl.sv'
+%% elaborate -bbox true -top top
+INFO (ISW003): Top module name is "top".
+[INFO (VERI-1018)] ../src/top.sv(11): compiling module 'top'
+[INFO (VERI-1018)] ../src/IFE.sv(2): compiling module 'IFE'
+[INFO (VERI-1018)] ../src/program_counter.sv(1): compiling module 'program_counter'
+[INFO (VERI-1018)] ../src/SRAM_wrapper.sv(1): compiling module 'SRAM_wrapper'
+[INFO (VERI-1018)] ../sim/SRAM/SRAM_rtl.sv(1): compiling module 'SRAM'
+[WARN (VERI-9033)] ../sim/SRAM/SRAM_rtl.sv(32): array Memory_byte0 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[WARN (VERI-9033)] ../sim/SRAM/SRAM_rtl.sv(33): array Memory_byte1 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[WARN (VERI-9033)] ../sim/SRAM/SRAM_rtl.sv(34): array Memory_byte2 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[WARN (VERI-9033)] ../sim/SRAM/SRAM_rtl.sv(35): array Memory_byte3 (size 131072) automatically BLACK-BOXED. Use the "elaborate -bbox_a" command to prevent automatic black-boxing.
+[INFO (VERI-1018)] ../src/ID.sv(5): compiling module 'ID'
+[INFO (VERI-1018)] ../src/RegisterFile.sv(1): compiling module 'RegisterFile'
+[INFO (VERI-1018)] ../src/ImmediateGenerator.sv(1): compiling module 'ImmediateGenerator'
+[INFO (VERI-1018)] ../src/ControlUnit.sv(1): compiling module 'ControlUnit'
+[INFO (VERI-1018)] ../src/EXE.sv(3): compiling module 'EXE'
+[INFO (VERI-1018)] ../src/ALUCtrl.sv(1): compiling module 'ALUCtrl'
+[INFO (VERI-1018)] ../src/ALU.sv(1): compiling module 'ALU'
+[WARN (VERI-1899)] ../src/ALU.sv(88): 'mul' inside always_comb block does not represent combinational logic
+[INFO (VERI-1018)] ../src/MEM.sv(1): compiling module 'MEM'
+[INFO (VERI-1018)] ../src/WB.sv(1): compiling module 'WB'
+[INFO (VERI-1018)] ../src/Forwarding_Unit.sv(1): compiling module 'Forwarding_Unit'
+[INFO (VERI-1018)] ../src/BranchCtrl.sv(1): compiling module 'BranchCtrl'
+[INFO (VERI-1018)] ../src/HazardCtrl.sv(1): compiling module 'HazardCtrl'
+WARNING (WNL018): ../src/ALU.sv(71): multiply mult_32u_32u (size 64) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../src/ALU.sv(75): multiply mult_32s_32s (size 64) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../src/ALU.sv(79): multiply mult_32s_33s (size 65) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL018): ../src/ALU.sv(83): multiply mult_32u_32u (size 64) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+top
+%% 
+%% # Setup clock and reset
+%% clock clk
+%% reset rst
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst".
+%% 
+%% # Setup for CTL check
+%% set_superlint_fsm_ctl_livelock true
+WARNING (WG002): "superlint_fsm_ctl_livelock" is included as an initial release to gather feedback from early adopters and finalize implementation for an upcoming release.
+%% set_superlint_fsm_ctl_deadlock true
+WARNING (WG002): "superlint_fsm_ctl_deadlock" is included as an initial release to gather feedback from early adopters and finalize implementation for an upcoming release.
+%% 
+%% # Setup for LTL check
+%% #set_superlint_fsm_ctl_livelock false
+%% #set_superlint_fsm_ctl_deadlock false
+%% #set_superlint_add_automatic_task_assumption true
+%% 
+%% # Extract checks
+%% check_superlint -extract
+INFO (ISL009): Started detection of ARY_IS_OOBI, CAS_NO_PRIO checks
+INFO (ISL009): Started detection of BUS_IS_CONT checks
+INFO (ISL014): Started extracting properties for ARY_IS_OOBI,CAS_NO_PRIO checks
+INFO (ISL015): Extracted 3 properties of ARY_IS_OOBI,CAS_NO_PRIO
+INFO (ISL014): Started extracting properties for BUS_IS_CONT checks
+INFO (ISL015): Extracted 0 properties of BUS_IS_CONT
+INFO (ISL018): Started extraction of structural checks
+INFO (ISL016): Extracted 34 STRUCTURAL checks.
+INFO (ISL016): Extracted 3 SYNTH checks.
+INFO (ISL016): Extracted 10 BASIC LINT checks.
+50
+%% 
+%% # Prove
+%% set_superlint_prove_parallel_tasks on
+%% set_prove_no_traces true
+%% # check_superlint -prove -time_limit 10m -bg
+[<embedded>] % wc -l ../src/EXE.sv
+164 ../src/EXE.sv
+INFO (IPL005): Received request to exit from the console.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
